@@ -1,0 +1,179 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require_jquery.ui.all
+*= require_jquery-ui/
+ */
+
+.main_title {
+    margin-left: -10px;
+    padding-bottom: 15px;
+    font-size: 80px;
+       
+}
+.subtext {
+    padding-top:20px;
+    padding-bottom: 30px;
+    font-size: 18px;
+    color: grey;
+    
+}
+
+.form-actions {
+    padding-top: 20px;
+    
+}
+
+.control-label {
+    padding-bottom: 10px;
+    
+}
+
+.title {
+    font-size: 44px;
+    margin-bottom: 25px;
+    
+}
+
+.table_column {
+    font-size: 30px;
+    
+        
+}
+
+.top_bar {
+    font-size: 17px;
+    padding-top: 30px;
+    padding-left: 5px;
+    font-weight: 900;
+    color: #C7F464; 
+}
+
+.top_bar a{
+    color: #FF6B6B; 
+    }
+
+.navbar-fixed-top {
+    background-color: #02AAB0;
+    
+    height:90px;
+    
+}
+
+.subnav_bar {
+    background-color: #C3FF68;
+    height:130px;
+    
+}
+
+.body_container {
+    padding-left: 60px;
+    padding-top: 85px;
+    font-family: "Calibri" !important;
+    
+    
+}
+
+body {
+   font-family: "Calibri" !important; 
+}
+
+.btn.btn-lg.btn-info {
+    
+    margin-bottom: 20px;
+}
+
+.table :hover{
+    color: #FFE87C;
+    text-decoration: none;
+}
+
+.subtitle {
+    font-size: 36px;
+    padding_bottom: 20px;
+    color: grey;
+}
+
+a:link {
+    text-decoration:none;
+    
+}
+
+.top_menu {
+    display: inline;
+    font-size: 30px;
+
+    
+}
+.top_menu a {
+    color: #556270;
+    text-decoration: none !important;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
+.top_menu_item {
+    display: inline;
+    
+}
+
+.table_right_item {
+    display: inline;
+    float: right;
+  
+    
+}
+.table_left_item {
+    display: inline;
+    font-size: 24px;
+    color: grey;     
+        
+}
+
+.table_subitem {
+    display: inline;
+    font-size: 18px;
+    color: lightblue;     
+        
+}
+
+.table_row {
+    margin-bottom: 20px;  
+    width: 800px;
+}
+
+.top_menu_item :hover
+{
+text-decoration: none !important;
+background-color: #1693A5;
+
+} 
+
+a {
+    text-decoration: none !important;
+    color: #C44D58;
+}
+
+a:visited {
+    text-decoration:none !important;
+}
+
+a:hover {
+    text-decoration:none !important;
+}
+
+a:active {
+    text-decoration:none !important;
+}

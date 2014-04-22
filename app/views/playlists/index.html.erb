@@ -1,0 +1,30 @@
+
+<div class="title">
+  <p>Your playlists</p>
+</div>
+<div>
+    <%= link_to "Create a new playlist", new_user_playlist_path(@user), :class => 'btn btn-lg btn-info'  %>
+</div>
+<div class="table">
+
+  <table class="table table-striped">
+    <tbody>
+      <%@user.playlists.each do |playlist|%>
+      <tr>
+        <td class="table_column"><%= link_to  playlist.name, user_playlist_path(@user, playlist) %></td>
+         <td>
+           <div>
+            <%= link_to "Edit", edit_user_playlist_path(@user, playlist), :class => 'btn btn btn-warning' %>
+            <%= link_to "Delete", user_playlist_path(@user, playlist),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn  btn-danger' %>
+           </div>
+          
+        </td>
+      </tr>
+      <%end%>
+  </tbody>
+  </table>
+</div>
+

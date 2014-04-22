@@ -1,0 +1,30 @@
+
+<div class="title">
+  <p>Your tracks</p>
+</div>
+<div>
+    <%= link_to "Create a new track", new_album_track_path(@album), :class => 'btn btn-lg btn-info'  %>
+</div>
+<div class="table">
+
+  <table class="table table-hover">
+    <tbody>
+      <%@album.tracks.each do |track|%>
+      <tr>
+        <td class="table_column"><%= link_to  track.title, album_track_path(@album, track) %></td>
+        <td>
+           <div>
+            <%= link_to "Edit", edit_album_track_path(@album, track), :class => 'btn btn btn-warning' %>
+            <%= link_to "Delete", album_track_path(@album, track),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn  btn-danger' %>
+           </div>
+          
+        </td>
+      </tr>
+      <%end%>
+  </tbody>
+  </table>
+</div>
+

@@ -1,0 +1,16 @@
+
+<div class="main_title">
+  <p>Your album</p>
+</div>
+<div>
+  <h1><%=@album.title%></h1>
+</div>
+<div>
+  <h2><%= @album.author %></h2>
+</div>
+<div>
+  <h2><%= @album.description %></h2>
+</div>
+<div>
+    <%= link_to "Create a new track", new_album_track_path(@album), :class => 'btn btn-lg btn-info'  %>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="main_title">
+    <p>Welcome!!!</p>
+  </div>
+  <div class ="subtext">
+    <p>You can now navigate your music!</p>
+  </div>
+  <div>
+    <%= link_to "Create a new playlist", new_user_playlist_path(@user), :class => 'btn btn-lg btn-info'  %>
+  </div>
+  <div>
+    <%= link_to "Create a new album", new_user_album_path(@user), :class => 'btn btn-lg btn-info'  %>
+  </div>
+</div>
