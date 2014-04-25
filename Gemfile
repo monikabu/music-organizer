@@ -35,6 +35,7 @@ gem 'devise'
 
 gem 'twitter-bootstrap-rails'
 
+gem 'better_errors'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
