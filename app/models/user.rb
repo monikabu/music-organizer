@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   
   has_many :playlists
   has_many :albums
+  has_many :tracks, through: :albums
 end
