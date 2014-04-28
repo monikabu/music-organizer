@@ -7,6 +7,6 @@ class User < ActiveRecord::Base
   #atrr_accesible :email, :password, :password_confiramtion, :remeber_me
   
   has_many :playlists
-  has_many :albums
-  has_many :tracks, through: :albums
+
+  
 end
