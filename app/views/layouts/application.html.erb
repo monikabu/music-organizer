@@ -29,7 +29,7 @@
         <% end %>
             <% if user_signed_in? %>
             <div class="top_menu">
-            <div class="top_menu_item"><%= link_to 'Welcome menu', root_url  %> </div>
+            <div class="top_menu_item"><%= link_to 'Welcome menu', welcome_index_path  %> </div>
             <div class="top_menu_item"><%= link_to 'Playlists', user_playlists_path(@user)  %> </div>
             <div class="top_menu_item"><%= link_to 'Albums', user_albums_path(@user)  %> </div>
             </div>

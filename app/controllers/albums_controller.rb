@@ -2,20 +2,21 @@ class AlbumsController < ApplicationController
   respond_to :html, :xml, :json
   
   def new
-   @user = User.find(params[:user_id])
-   @album = @user.albums.build
+   @artist = Artist.find(params[:artist_id])
+   @album = @artist.albums.build
    respond_with(@album)
   end
   
   def create
-    @user = User.find(params[:user_id])
-    @album = @user.albums.create(album_params)
+    @artist = Artist.find(params[:artist_id])
+    @album = @artist.albums.create(album_params)
     redirect_to user_albums_path
   end
   
   def index
     @user = User.find(params[:user_id])
-    @album = @user.albums.all
+    
+    
   end
   
   def edit

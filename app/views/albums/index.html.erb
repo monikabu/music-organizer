@@ -10,7 +10,10 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-      <%@user.albums.each do |album|%>
+      
+        <%@user.playlists.each do |playlist|%>
+        <%playlist.tracks do |track|%>
+        <%track.albums.each do |album|%>
         <div class="table_row">
           <a data-toggle="collapse" data-parent="#accordion" href="#<%= album.title%>">
             <p class="table_left_item"><%= album.title%> - created by <%= album.author%></p>
@@ -29,7 +32,10 @@
              </div>
            </div>
          </div>
+        
       <%end%>
+        <%end%>
+        <%end%>
       </h4>
     </div>
   </div>
