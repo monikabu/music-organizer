@@ -1,6 +1,8 @@
 class PlaylistsController < ApplicationController
  respond_to :html, :xml, :json
-  
+ 
+ skip_before_filter :authenticate_user!, :only => [:show]
+ 
   def new
    @user = User.find(params[:user_id])
    @playlist = @user.playlists.build
