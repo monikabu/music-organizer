@@ -35,7 +35,7 @@ class AlbumsController < ApplicationController
       render "edit"
     end
   end
-  
+   
   def show
     @user = User.find(params[:user_id])
     @album = @user.albums.find(params[:id])

@@ -1,0 +1,17 @@
+
+<div class="title">
+  <p>Main Page</p>
+</div>
+
+<div>
+  <table>
+    <tbody>
+      <% @user.each do |user| %>
+        <% user.playlists.each do |playlist| %>
+          <tr><td></td><td class='main_page_playlist'><%= link_to playlist.name, user_playlist_path(@user, playlist) %></td><td class='creator'> created by <%= playlist.user.email %></td></tr>
+          
+        <%end%>
+      <%end%>
+    </tbody>
+  </table>
+</div>

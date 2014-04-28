@@ -177,3 +177,18 @@ a:hover {
 a:active {
     text-decoration:none !important;
 }
+
+.creator {
+    font-size: 12px;
+    color: grey;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.main_page_playlist {
+    font-size: 34px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+}
