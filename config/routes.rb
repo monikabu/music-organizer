@@ -3,10 +3,14 @@ Music::Application.routes.draw do
   get "welcome/index"
   devise_for :users 
   
-  resources :users do
+ resources :users do
     resources :playlists 
-    resources :albums
-  end
+    resources :artists
+ end
+ resources :artists do
+   resources :albums
+ end
+  
   
   resources :albums do
     resources :tracks
