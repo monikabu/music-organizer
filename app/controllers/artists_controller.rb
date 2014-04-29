@@ -1,5 +1,8 @@
 class ArtistsController < ApplicationController
   
+  def index
+    
+  end
   def new
     @user = User.find(current_user.id)
     @artist = @user.artists.new

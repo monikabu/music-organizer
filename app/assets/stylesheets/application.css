@@ -192,3 +192,20 @@ a:active {
     padding-bottom: 20px;
     padding-left: 60px;
 }
+
+.footer {
+    margin-top: 160px;
+    height : 200px;
+    background-color: #02AAB0;
+    width: 100%;   
+}
+
+.footer_text {
+    font-size: 16px;
+    float: right;
+    color:yellow;
+    margin-top: 170px;
+    margin-right: 20px;
+    
+    
+}

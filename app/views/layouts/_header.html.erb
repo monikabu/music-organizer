@@ -1,0 +1,27 @@
+
+<div id="user_nav">
+  <div class="navbar navbar-fixed-top">  
+    <div class="top_bar">  
+        <% if user_signed_in? %>
+            Signed in as <%= current_user.email %>.
+            <strong><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></strong>
+        <% else %>
+            <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+        <% end %>
+            <% if user_signed_in? %>
+            <div class="top_menu">
+            <div class="top_menu_item"><%= link_to 'Main page', root_path  %> </div>
+            <div class="top_menu_item"><%= link_to 'Welcome menu', welcome_index_path  %> </div>
+            <div class="top_menu_item"><%= link_to 'Playlists', user_playlists_path(current_user.id)  %> </div>
+            <div class="top_menu_item"><%= link_to 'Albums', albums_path  %> </div>
+            <div class="top_menu_item"><%= link_to 'Artists', user_artists_path(current_user.id)  %> </div>
+            </div>
+            <%end%>
+    </div>
+    
+  </div>
+<div class="subnav_bar"> 
+</div>
+</div>
+
+
