@@ -1,1 +1,29 @@
-Page under construction
+
+<div class="title">
+  <p>Your Artists</p>
+</div>
+<div>
+    <%= link_to "Create a new artist", new_user_artist_path, :class => 'btn btn-lg btn-info'  %>
+</div>
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <% @artist.each do |artist| %>
+           
+        <p><%= artist.name%><p>
+        <div>
+            <%= link_to "Edit", edit_user_artist_path(current_user.id, artist), :class => 'btn btn btn-warning' %>
+            <%= link_to "Delete", user_artist_path(current_user.id, artist),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn  btn-danger' %>
+           </div>
+       <%end%>
+      </h4>
+    </div>
+  </div>
+</div>
+
+    
