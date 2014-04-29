@@ -20,18 +20,20 @@ class AlbumsController < ApplicationController
   end
   
   def edit
-    @user = User.find(params[:user_id])
-    @album = @user.albums.find(params[:id])
+    @user = User.find(current_user.id)
+    @artist = @user.artists.find(params[:artist_id])
+    @album = @artist.albums.find(params[:id])
     respond_with(@album)
   end
   
   def update
-    @user = Artist.find(params[:user_id])
-    @album = @user.albums.find(params[:id])
+    @user = User.find(current_user.id)
+    @artist = @user.artists.find(params[:artist_id])
+    @album = @artist.albums.find(params[:id])
     
     if 
       @album.update(album_params)
-      #redirect_to user_albums_path(@user)
+      redirect_to artist_albums_path(@artist)
     else
       render "edit"
     end
@@ -44,10 +46,11 @@ class AlbumsController < ApplicationController
   end
   
   def destroy
-    @user = User.find(params[:user_id])
-    @album = @user.albums.find(params[:id])
+    @user = User.find(current_user.id)
+    @artist = @user.artists.find(params[:artist_id])
+    @album = @artist.albums.find(params[:id])
     @album.destroy
-    #redirect_to user_albums_path(@user)
+    redirect_to artist_albums_path(@artist)
   end
   
   private 

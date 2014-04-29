@@ -14,6 +14,13 @@
         <% artist.albums.each do |album|%>
        
         <p><%= album.title%><p>
+        <div>
+            <%= link_to "Edit", edit_artist_album_path(artist, album), :class => 'btn btn btn-warning' %>
+            <%= link_to "Delete", artist_album_path(artist, album),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn  btn-danger' %>
+           </div>
         <%end%>
         <%end%>
       </h4>
