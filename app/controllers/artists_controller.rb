@@ -32,6 +32,11 @@ class ArtistsController < ApplicationController
       render "edit"
     end
   end
+  
+  def show
+    @user = User.find(current_user.id)
+    @artist = @user.artists.find(params[:id])
+  end
    
   def destroy
     @user = User.find(current_user.id)

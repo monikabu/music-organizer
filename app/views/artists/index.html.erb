@@ -12,7 +12,7 @@
       <h4 class="panel-title">
         <% @artist.each do |artist| %>
            
-        <p><%= artist.name%><p>
+        <p><%=link_to artist.name, user_artist_path(artist.user, artist)%><p>
         <div>
             <%= link_to "Edit", edit_user_artist_path(current_user.id, artist), :class => 'btn btn btn-warning' %>
             <%= link_to "Delete", user_artist_path(current_user.id, artist),

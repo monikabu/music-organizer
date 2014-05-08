@@ -1,7 +1,12 @@
 
 <div class="main_title">
-  <p>Your playlist</p>
+  <p>Playlist</p>
 </div>
 <div>
   <h2><%= @playlist.name %></h2>
 </div>
+<%= link_to  "add a new track", user_artists_path(@user), :class => 'btn btn-lg btn-info'   %>
+
+<%@playlist.tracks.each do |tracks|%>
+<%=track.title%>
+<%end%>

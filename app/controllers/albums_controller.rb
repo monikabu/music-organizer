@@ -40,8 +40,8 @@ class AlbumsController < ApplicationController
   end
    
   def show
-    @user = User.find(params[:user_id])
-    @album = @user.albums.find(params[:id])
+    @artist = Artist.find(params[:artist_id])
+    @album = @artist.albums.find(params[:id])
     respond_with(@album)
   end
   
